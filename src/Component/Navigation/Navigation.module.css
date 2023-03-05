@@ -1,0 +1,41 @@
+.list{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: -webkit-inline-box;
+}
+
+.item{
+    margin-right: 20px;
+}
+
+.link{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background: #ffffff;
+    position: relative;
+    box-shadow: 0px 15px 30px rgba(25, 31, 61, 0.1);
+    border-radius: 10px;
+}
+
+.link::before{
+    content: '';
+    width: 33px;
+    height: 33px;
+    display: block;
+    margin-right: 10px;
+}
+
+.link.main::before{
+    content: url(../../images/link.svg);
+}
+.link.portfolio::before {
+    content: url(../../images/livros.svg);
+}
+.link.about::before {
+    content: url(../../images/music.svg);
+}
+.link.contents::before {
+    content: url(../../images/video.svg);
+}
