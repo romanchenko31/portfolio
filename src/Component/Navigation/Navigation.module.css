@@ -3,7 +3,12 @@
     bottom: 0;
     left: -15px;
     display: -webkit-inline-box;
+    height: 50px;
+        width: 100%;
+        overflow-x: scroll;
+overflow-x: scroll hidden
 }
+
 
 .item{
     margin-right: 20px;
