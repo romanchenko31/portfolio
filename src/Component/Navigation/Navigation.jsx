@@ -28,28 +28,31 @@ const dataMenu = [
 const Navigation = () => {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
+  const [j, setJ] = useState(0);
   const ul = useRef(null);
   useEffect(() => {
-    console.log(x - y);
-    ul.current.style.transform = `translate3d(${(x - y) * -1}px,0,0)`;
-  }, [x, y]);
+    console.log(y);
+    ul.current.style.transform = `translate3d(${y * -1}px,0,0)`;
+  }, [y]);
 
   return (
     <>
       <div className={style.list}>
         <ul
           ref={ul}
-          onMouseEnter={(v) => {
-            console.log(v);
-          }}
-          onTouchStart={({ changedTouches }) => {
+          onTouchMove={({ changedTouches }) => {
             const { clientX } = changedTouches[0];
-            setX(clientX);
+            setY(350 - clientX);
           }}
-          onTouchEnd={({ changedTouches }) => {
-            const { clientX } = changedTouches[0];
-            setY(clientX);
-          }}
+          // onTouchStart={({ changedTouches }) => {
+          //   const { clientX } = changedTouches[0];
+          //   setX(clientX);
+          // }}
+          // onTouchEnd={({ changedTouches }) => {
+          //   const { clientX } = changedTouches[0];
+
+          //   setY(350 - clientX);
+          // }}
           className={style.l}
         >
           {dataMenu.map((v) => {
