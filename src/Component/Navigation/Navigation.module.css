@@ -1,21 +1,17 @@
 .list{
     position: absolute;
-        width: 350px;
-            overflow: hidden;
-            left: 50%;
-            transform: translate(-50%, 0);
-bottom: 0;
-border-left: 1px solid red;
-border-right: 1px solid red;
-}
-.l{
     bottom: 0;
         left: -15px;
-        /* display: -webkit-inline-box; */
-        transform: translate3d(0, 0, 0);
-        transition: all 300ms;
-    display: flex;
+        width: 100%;
+        display: flex;
         flex-direction: row;
+        overflow-x: auto;
+        scroll-snap-type: x;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+}
+.list::-webkit-scrollbar {
+    display: none;
 }
 
 
