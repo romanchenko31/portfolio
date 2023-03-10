@@ -1,27 +1,41 @@
-
-.list{
-    position: absolute !important;
-            right: -20px;
-            bottom: 0;
-            display: flex;
-    
-            overflow: hidden;
+.list {
+  position: absolute !important;
+  overflow: visible !important;
+  right: -20px;
+  bottom: 25px;
+  display: flex;
 }
 
-
-.item{
-    box-shadow: 0px 15px 30px rgba(25, 31, 61, 0.1);
-        border-radius: 10px;
-        background: #ffffff;
+.item {
+  box-shadow: 0px 15px 30px rgba(25, 31, 61, 0.1);
+  border-radius: 10px;
+  background: #ffffff;
 }
 
-.link{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    
+.link {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 140%;
+  color: #495eca;
+  opacity: 0.5;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: all 500ms;
 }
 
-.img{
-    margin-right: 10px;
+.link:hover {
+  color: #495eca;
+  opacity: 1;
+}
+
+.img {
+  margin-right: 10px;
+  width: 33px;
+  height: 33px;
 }

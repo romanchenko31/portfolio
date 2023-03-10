@@ -56,13 +56,7 @@ const Navigation = () => {
             key={value.id}
           >
             <NavLink className={style.link} to={value.path}>
-              <img
-                className={style.img}
-                width="33"
-                height="33"
-                src={value.img}
-                alt="img"
-              />
+              <img className={style.img} src={value.img} alt="img" />
               {value.label}
             </NavLink>
           </li>
